@@ -476,6 +476,78 @@ body::after {
   color:var(--muted);
   letter-spacing:.04em;
 }
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+
+  nav {
+    padding: 16px 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 100px;
+  }
+
+  .hero-content {
+    padding: 0 24px 80px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+    line-height: 1.15;
+  }
+
+  .hero-sub {
+    font-size: 10px;
+    letter-spacing: .2em;
+  }
+
+  .hero-badges {
+    gap: 8px;
+  }
+
+  .hero-badge {
+    font-size: 9px;
+    padding: 6px 14px;
+  }
+
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    padding: 80px 24px;
+  }
+
+  .feature-inner {
+    padding: 0 24px;
+  }
+
+  .feature-inner h2 {
+    font-size: 42px;
+  }
+
+  .amenity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .who-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location {
+    grid-template-columns: 1fr;
+    padding: 80px 24px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+}  
 </style>
 </head>
 <body>
