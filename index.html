@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sapporo Private Retreat | Luxury Villa with Private Sauna & Open-Air Bath in Hokkaido</title>
+
+<meta name="description" content="Luxury villa in Sapporo, Hokkaido with private sauna and open-air bath. 250㎡ entire house rental for up to 10 guests. Ideal for families, groups and premium travellers seeking privacy.">
+
+<meta name="keywords" content="Sapporo luxury villa, Hokkaido private rental, Sapporo private sauna, open-air bath Sapporo, luxury accommodation Hokkaido, large group stay Sapporo">
+
+<meta name="author" content="Sapporo Private Retreat">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://あなたのドメイン.com/">
+
+<!-- Open Graph (Facebook / LINE / SNS) -->
+<meta property="og:title" content="Sapporo Private Retreat – Luxury Private Villa in Hokkaido">
+<meta property="og:description" content="Exclusive 250㎡ luxury villa with private sauna and open-air bath in central Sapporo. Entire luxury villa rental for up to 10 guests.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://あなたのドメイン.com/">
+<meta property="og:image" content="https://あなたのドメイン.com/main.jpeg">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sapporo Private Retreat – Luxury Villa in Hokkaido">
+<meta name="twitter:description" content="Private sauna, open-air bath, cinema room. Entire 250㎡ luxury villa in Sapporo for up to 10 guests.">
+<meta name="twitter:image" content="https://あなたのドメイン.com/main.jpeg">
+
+<!-- Preload Hero Image -->
+<link rel="preload" as="image" href="main.jpeg">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Tenor+Sans&display=swap" rel="stylesheet">
+
+<!-- Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Sapporo Private Retreat",
+  "description": "Luxury private villa in Sapporo, Hokkaido with private sauna and open-air bath. Entire luxury villa rental for up to 10 guests.",
+  "image": "https://あなたのドメイン.com/main.jpeg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Sapporo",
+    "addressRegion": "Hokkaido",
+    "addressCountry": "JP"
+  },
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Private Sauna" },
+    { "@type": "LocationFeatureSpecification", "name": "Open-Air Bath" },
+    { "@type": "LocationFeatureSpecification", "name": "Cinema Room" }
+  ],
+  "maximumAttendeeCapacity": 10,
+  "floorSize": {
+    "@type": "QuantitativeValue",
+    "value": "250",
+    "unitCode": "MTK"
+  }
+}
+</script>
+
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --black: #090908;
+  --dark: #111110;
+  --mid: #1a1a18;
+  --mid2: #222220;
+  --gold: #c9a96e;
+  --gold-light: #e8d5a8;
+  --gold-dim: rgba(201,169,110,0.18);
+  --blue: #9fbfcc;
+  --cream: #f4efe6;
+  --warm: #faf8f3;
+  --muted: #7a7a72;
+}
+html { scroll-behavior:smooth; }
+body {
+  background: var(--black);
+  color: var(--cream);
+  font-family: 'Tenor Sans', sans-serif;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* CURSOR */
+.cursor { width:6px; height:6px; background:var(--gold); border-radius:50%; position:fixed; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); }
+.cursor-ring { width:34px; height:34px; border:1px solid rgba(201,169,110,0.35); border-radius:50%; position:fixed; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); }
+
+/* NAV */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:200;
+  padding:24px 60px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+nav::before {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(to bottom, rgba(9,9,8,0.98) 0%, transparent 100%);
+  pointer-events:none;
+}
+.nav-logo { font-family:'Cormorant Garamond',serif; font-size:13px; letter-spacing:.35em; text-transform:uppercase; color:var(--gold-light); position:relative; z-index:1; }
+.nav-links { display:flex; gap:44px; list-style:none; position:relative; z-index:1; }
+.nav-links a { font-size:11px; letter-spacing:.25em; text-transform:uppercase; color:var(--muted); text-decoration:none; transition:color .3s; }
+.nav-links a:hover { color:var(--gold); }
+
+/* ═══ HERO — pure CSS, no images ═══ */
+.hero {
+  min-height:100vh; position:relative;
+  display:flex; align-items:center; overflow:hidden;padding-top:120px;
+}
+.hero-bg{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(to right,
+      rgba(9,9,8,0.98) 0%,
+      rgba(9,9,8,0.92) 40%,
+      rgba(9,9,8,0.6) 60%,
+      rgba(9,9,8,0.2) 75%,
+      rgba(9,9,8,0) 100%
+    ),
+    url("main.jpeg");
+  background-size:cover;
+  background-position:right center;
+  background-repeat:no-repeat;
+}
+
+/* decorative lines */
+.hero-bg::before {
+  content:''; position:absolute; inset:0;
+  background-image:
+    repeating-linear-gradient(90deg, transparent 0px, transparent 119px, rgba(201,169,110,0.04) 119px, rgba(201,169,110,0.04) 120px),
+    repeating-linear-gradient(0deg,  transparent 0px, transparent 79px,  rgba(201,169,110,0.03) 79px,  rgba(201,169,110,0.03) 80px);
+}
+.hero-bg::after {
+  background: linear-gradient(
+    to top,
+    rgba(9,9,8,0.6) 0%,
+    rgba(9,9,8,0.3) 35%,
+    transparent 70%
+  );
+}
+/* floating glow orb */
+.hero-orb {
+  position:absolute; top:15%; right:10%;
+  width:420px; height:420px;
+  background:radial-gradient(circle, rgba(180,120,40,0.12) 0%, transparent 70%);
+  border-radius:50%; pointer-events:none;
+  animation:orbPulse 6s ease-in-out infinite;
+}
+@keyframes orbPulse {
+  0%,100% { transform:scale(1); opacity:.7; }
+  50% { transform:scale(1.15); opacity:1; }
+}
+.hero-content { position:relative; z-index:2; padding:0 80px 96px; max-width:900px; }
+.hero-eyebrow {
+  font-size:11px; letter-spacing:.55em; text-transform:uppercase; color:var(--gold);
+  margin-bottom:28px; display:flex; align-items:center; gap:16px;
+  opacity:0; animation:fadeUp 1s .4s forwards;
+}
+.hero-eyebrow::before { content:''; display:block; width:36px; height:1px; background:var(--gold); }
+.hero-title {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(64px,10vw,140px); font-weight:300;
+  color:var(--warm); line-height:1.05; letter-spacing:-.02em;
+  opacity:0; animation:fadeUp 1.2s .6s forwards;
+}
+.hero-title em { font-style:italic; color:var(--gold-light); }
+.hero-sub {
+  margin-top:36px; font-size:12px; letter-spacing:.3em; color:var(--muted); text-transform:uppercase;
+  opacity:0; animation:fadeUp 1s 1s forwards;
+}
+.hero-badges {
+  display:flex; gap:12px; margin-top:40px; flex-wrap:wrap;
+  opacity:0; animation:fadeUp 1s 1.2s forwards;
+}
+.hero-badge {
+  padding:9px 22px; border:1px solid rgba(201,169,110,0.35);
+  font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold-light);
+  background:rgba(9,9,8,0.4); backdrop-filter:blur(8px);
+}
+
+/* ═══ INTRO ═══ */
+.intro {
+  padding:130px 60px; max-width:1400px; margin:0 auto;
+  display:grid; grid-template-columns:1fr 1fr; gap:100px; align-items:center;
+}
+.intro-text h2 {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(34px,4vw,54px); font-weight:300;
+  line-height:1.15; color:var(--warm); margin-bottom:32px;
+}
+.intro-text h2 em { font-style:italic; color:var(--gold-light); }
+.intro-text p { font-size:14px; line-height:2; color:var(--muted); letter-spacing:.04em; margin-bottom:16px; }
+.stats-grid { display:grid; grid-template-columns:1fr 1fr; gap:3px; }
+.stat { padding:36px 28px; background:var(--mid); text-align:center; transition:background .3s; }
+.stat:hover { background:var(--mid2); }
+.stat-num { font-family:'Cormorant Garamond',serif; font-size:52px; font-weight:300; color:var(--gold-light); line-height:1; }
+.stat-label { font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:var(--muted); margin-top:10px; }
+
+/* ═══ FEATURE SECTIONS (sauna + bath) — pure CSS backgrounds ═══ */
+.feature-section {
+  min-height:85vh; position:relative;
+  display:flex; align-items:center; overflow:hidden;
+}
+/* SAUNA — warm amber tones */
+.feature-section.sauna .feature-bg {
+  position:absolute; inset:0;
+  background:
+    linear-gradient(to right, rgba(9,9,8,0.75) 0%, rgba(9,9,8,0.5) 45%, rgba(9,9,8,0.1) 100%),
+    url("sauna2.jpg") 70% center/cover no-repeat;
+}
+.feature-section.sauna .feature-bg::before {
+  content:''; position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 40% 60% at 80% 30%, rgba(220,140,40,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 30% 40% at 70% 75%, rgba(180,80,20,0.12) 0%, transparent 50%);
+}
+/* BATH — cool blue tones */
+.feature-section.bath .feature-bg {
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      to right,
+      rgba(9,9,8,0.85) 0%,
+      rgba(9,9,8,0.6) 45%,
+      rgba(9,9,8,0.15) 100%
+    ),
+    url("openbath.jpg") 70% center/cover no-repeat; /* ← 画像名変更 */
+}
+.feature-section.bath .feature-bg::before {
+  content:''; position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 40% 60% at 80% 35%, rgba(60,140,180,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 30% 50% at 72% 70%, rgba(30,90,130,0.08) 0%, transparent 50%);
+}
+.feature-section .feature-bg::after {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(to top, var(--black) 0%, transparent 18%);
+}
+.feature-inner { position:relative; z-index:2; padding:0 80px; max-width:660px; }
+.feature-tag {
+  display:inline-flex; align-items:center; gap:14px;
+  font-size:10px; letter-spacing:.55em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:32px;
+}
+.feature-tag::before { content:''; display:block; width:40px; height:1px; background:currentColor; }
+.feature-tag.blue { color:var(--blue); }
+.feature-inner h2 {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(46px,6vw,86px); font-weight:300;
+  line-height:.92; color:var(--warm); margin-bottom:36px;
+}
+.feature-inner h2 em { font-style:italic; display:block; }
+.feature-inner h2 em.gold { color:var(--gold-light); }
+.feature-inner h2 em.blue { color:var(--blue); }
+.feature-inner p { font-size:14px; line-height:2; color:var(--muted); letter-spacing:.04em; margin-bottom:16px; }
+.badges { display:flex; gap:14px; margin-top:36px; flex-wrap:nowrap; }
+.badge {
+  padding:9px 20px; border:1px solid rgba(201,169,110,0.32);
+  font-size:10px; letter-spacing:.28em; text-transform:uppercase; color:var(--gold-light);
+}
+.badge.blue { border-color:rgba(159,191,204,0.35); color:var(--blue); }
+
+/* ═══ AMENITIES ═══ */
+.amenities { padding:0 60px 120px; max-width:1400px; margin:0 auto; }
+.section-header { text-align:center; margin-bottom:70px; }
+.eyebrow { font-size:10px; letter-spacing:.6em; text-transform:uppercase; color:var(--gold); margin-bottom:20px; }
+.section-title { font-family:'Cormorant Garamond',serif; font-size:clamp(30px,4vw,50px); font-weight:300; color:var(--warm); }
+.gold-line { width:60px; height:1px; background:var(--gold); margin:22px auto 0; }
+.amenity-grid { display:grid; grid-template-columns:1fr 1fr; gap:3px; margin-bottom:3px; }
+.amenity-card {
+  background:var(--mid); padding:52px 44px; position:relative; overflow:hidden; transition:background .4s;
+}
+.amenity-card.featured { background:#1e1a12; }
+.amenity-card::before {
+  content:''; position:absolute; top:0; left:0; width:100%; height:2px;
+  background:linear-gradient(to right, transparent, var(--gold), transparent);
+  opacity:0; transition:opacity .4s;
+}
+.amenity-card.featured::before { opacity:1; }
+.amenity-card:hover { background:var(--mid2); }
+.amenity-card:hover::before { opacity:1; }
+.amenity-num { font-family:'Cormorant Garamond',serif; font-size:72px; font-weight:300; color:rgba(201,169,110,0.1); line-height:1; margin-bottom:18px; }
+.amenity-card.featured .amenity-num { font-size:86px; color:rgba(201,169,110,0.14); }
+.amenity-name { font-size:12px; letter-spacing:.28em; text-transform:uppercase; color:var(--gold-light); margin-bottom:12px; }
+.amenity-card.featured .amenity-name { color:var(--gold); font-size:13px; }
+.amenity-desc { font-size:13px; line-height:1.95; color:var(--muted); }
+.amenity-card.featured .amenity-desc { font-size:14px; }
+
+/* ═══ GALLERY — RESTORE PERFECT GRID ═══ */
+
+.gallery {
+  padding:0 0 120px;
+}
+
+.gallery-track{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  grid-template-rows:320px 320px;
+  gap:3px;
+}
+
+/* 左の大きい画像 */
+.gallery-img:first-child{
+  grid-row:1 / 3;
+}
+
+/* 画像基本 */
+.gallery-img{
+  position:relative;
+  overflow:hidden;
+}
+
+.gallery-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .6s ease;
+}
+
+.gallery-img:hover img{
+  transform:scale(1.04);
+}
+
+/* ラベル */
+.gallery-label{
+  position:absolute;
+  bottom:18px;
+  left:18px;
+  font-size:10px;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:#fff;
+  background:rgba(0,0,0,0.5);
+  padding:6px 16px;
+  backdrop-filter:blur(6px);
+}
+
+/* モバイル */
+@media(max-width:900px){
+  .gallery-track{
+    grid-template-columns:1fr;
+    grid-template-rows:auto;
+  }
+
+  .gallery-img:first-child{
+    grid-row:auto;
+  }
+
+  .gallery-img{
+    height:260px;
+  }
+}
+/* ═══ WHO ═══ */
+.who { padding:0 60px 120px; max-width:1400px; margin:0 auto; }
+.who-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:3px; margin-top:70px; }
+.who-item { padding:52px 32px; background:var(--mid); text-align:center; transition:background .3s; }
+.who-item:hover { background:var(--mid2); }
+.who-icon { font-size:28px; display:block; margin-bottom:22px; }
+.who-title { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:300; color:var(--gold-light); margin-bottom:12px; }
+.who-desc { font-size:12px; line-height:1.95; color:var(--muted); letter-spacing:.03em; }
+
+/* ═══ LOCATION ═══ */
+.location {
+  background:var(--mid); padding:120px 60px;
+  display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;
+}
+.location-text .eyebrow { text-align:left; }
+.location-text h2 {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(34px,4vw,56px); font-weight:300;
+  color:var(--warm); line-height:1.1; margin-bottom:28px;
+}
+.location-text h2 em { font-style:italic; color:var(--gold-light); }
+.location-text p { font-size:14px; line-height:2; color:var(--muted); margin-bottom:14px; }
+/* CSS map placeholder */
+.map-visual {
+  height:460px; position:relative; overflow:hidden;
+  background:
+    linear-gradient(
+      to top,
+      rgba(9,9,8,0.85),
+      rgba(9,9,8,0.3)
+    ),
+    url("night.jpg") center/cover no-repeat;
+}
+.map-label {
+  position:absolute; bottom:20px; left:50%; transform:translateX(-50%);
+  font-size:10px; letter-spacing:.4em; text-transform:uppercase; color:var(--gold);
+  background:rgba(9,9,8,0.7); padding:7px 20px; backdrop-filter:blur(6px); white-space:nowrap;
+}
+
+/* ═══ CTA ═══ */
+.cta-section { padding:160px 60px; text-align:center; position:relative; }
+.cta-section::before {
+  content:''; position:absolute; top:0; left:50%; transform:translateX(-50%);
+  width:1px; height:80px; background:linear-gradient(to bottom, transparent, var(--gold));
+}
+.cta-eyebrow { font-size:10px; letter-spacing:.6em; text-transform:uppercase; color:var(--gold); margin-bottom:28px; }
+.cta-title {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(38px,6vw,80px); font-weight:300; line-height:1.05; color:var(--warm);
+  margin-bottom:52px; max-width:750px; margin-left:auto; margin-right:auto;
+}
+.cta-title em { font-style:italic; color:var(--gold-light); }
+.cta-buttons { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin-bottom:32px; }
+.btn-primary {
+  display:inline-block; padding:18px 56px;
+  border:1px solid var(--gold); color:var(--gold-light);
+  font-family:'Tenor Sans',sans-serif; font-size:11px; letter-spacing:.4em; text-transform:uppercase;
+  text-decoration:none; cursor:none; position:relative; overflow:hidden; transition:color .4s; background:transparent;
+}
+.btn-primary::before {
+  content:''; position:absolute; inset:0; background:var(--gold);
+  transform:scaleX(0); transform-origin:left; transition:transform .4s ease; z-index:-1;
+}
+.btn-primary:hover { color:var(--black); }
+.btn-primary:hover::before { transform:scaleX(1); }
+.btn-secondary {
+  display:inline-block; padding:18px 56px;
+  border:1px solid rgba(201,169,110,0.28); color:var(--muted);
+  font-family:'Tenor Sans',sans-serif; font-size:11px; letter-spacing:.4em; text-transform:uppercase;
+  text-decoration:none; cursor:none; background:transparent; transition:border-color .3s, color .3s;
+}
+.btn-secondary:hover { border-color:var(--gold); color:var(--gold-light); }
+.cta-note { font-size:11px; letter-spacing:.2em; color:var(--muted); }
+
+/* ═══ FOOTER ═══ */
+footer {
+  border-top:1px solid rgba(201,169,110,0.12); padding:52px 60px;
+  display:flex; justify-content:space-between; align-items:center;
+}
+.footer-logo { font-family:'Cormorant Garamond',serif; font-size:16px; font-weight:300; letter-spacing:.2em; color:var(--gold-light); }
+.footer-links { display:flex; gap:32px; list-style:none; }
+.footer-links a { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); text-decoration:none; transition:color .3s; }
+.footer-links a:hover { color:var(--gold); }
+.footer-copy { font-size:10px; letter-spacing:.1em; color:rgba(122,122,114,0.45); }
+
+/* ANIMATIONS */
+@keyframes fadeUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+.reveal { opacity:0; transform:translateY(36px); transition:opacity .9s ease, transform .9s ease; }
+.reveal.visible { opacity:1; transform:translateY(0); }
+
+/* grain */
+body::after {
+  content:''; position:fixed; inset:0; pointer-events:none; z-index:9997; opacity:.022;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:128px;
+}
+
+/* ───── SEO SECTION ───── */
+.seo-section{
+  padding:80px 0 160px;
+}
+
+.seo-text{
+  max-width:900px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.seo-text p{
+  font-size:14px;
+  line-height:2;
+  color:var(--muted);
+  letter-spacing:.04em;
+}
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Sapporo Private Retreat</div>
+  <ul class="nav-links">
+    <li><a href="#sauna">Sauna &amp; Bath</a></li>
+    <li><a href="#amenities">Amenities</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#inquiry">Book</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-orb"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Sapporo · Hokkaido · Japan</p>
+    <h1 class="hero-title">
+    Luxury Villa <br>
+    <em>in Sapporo</em><br>
+    Hokkaido
+    </h1>
+    <p class="hero-sub">Entire Luxury Villa · 250㎡ · 4 Bedrooms · Up to 10 Guests</p>
+    <div class="hero-badges">
+      <span class="hero-badge"> Private Sauna</span>
+      <span class="hero-badge"> Open-Air Bath</span>
+      <span class="hero-badge"> Cinema Room</span>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="intro-text reveal">
+    <h2>A Place to <em>Gather,<br>Unwind,</em> and Remember</h2>
+    <p>Nestled in Sapporo, this 250㎡ private luxury villa is designed for those who want more than a hotel. Whether you're travelling with family, celebrating with friends, or retreating with your team — this is your home for the stay.</p>
+    <p>Rent the entire property exclusively. No shared spaces, no other guests. Just your group, beautifully comfortable in the heart of Hokkaido.</p>
+  </div>
+  <div class="stats-grid reveal">
+    <div class="stat"><div class="stat-num">250㎡</div><div class="stat-label">Entire Luxury Villa</div></div>
+    <div class="stat"><div class="stat-num">4</div><div class="stat-label">Bedrooms</div></div>
+    <div class="stat"><div class="stat-num">10</div><div class="stat-label">Max Guests</div></div>
+    <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Exclusive Rental</div></div>
+  </div>
+</section>
+
+<!-- SAUNA -->
+<section class="feature-section sauna" id="sauna">
+  <div class="feature-bg"></div>
+  <div class="feature-inner reveal">
+    <div class="feature-tag">Signature Feature</div>
+    <h2>Private<br><em class="gold">Sauna Suite</em></h2>
+    <p>Step into the warmth of your own private Finnish-style sauna — reserved entirely for your group. A dedicated wellness space to decompress, detox, and reconnect.</p>
+    <p>Löyly steam, cedar wood, and total silence. The perfect end to a day exploring Hokkaido.</p>
+    <div class="badges">
+      <span class="badge">Finnish Sauna</span>
+      <span class="badge">Private Use Only</span>
+      <span class="badge">Wellness Suite</span>
+    </div>
+  </div>
+</section>
+
+<!-- OUTDOOR BATH -->
+<section class="feature-section bath">
+  <div class="feature-bg"></div>
+  <div class="feature-inner reveal">
+    <div class="feature-tag blue">Signature Feature</div>
+    <h2>Open-Air<br><em class="blue">Private Bath</em></h2>
+    <p>Soak beneath the Hokkaido sky in your own open-air bath — a deeply Japanese experience, yours alone. In winter, feel the magic of crisp cold air against warm water as snowflakes fall around you.</p>
+    <p>In every season, the outdoor bath turns an evening into a memory that stays with you long after you leave.</p>
+    <div class="badges">
+      <span class="badge blue">Outdoor Bath</span>
+      <span class="badge blue">All Seasons</span>
+      <span class="badge blue">Private Only</span>
+    </div>
+  </div>
+</section>
+
+<!-- AMENITIES -->
+<section class="amenities" id="amenities">
+  <div class="section-header reveal">
+    <p class="eyebrow">The Luxury Villa</p>
+    <h2 class="section-title">Luxury Villa Amenities in Sapporo</h2>
+    <div class="gold-line"></div>
+  </div>
+  <!-- row 1: featured -->
+  <div class="amenity-grid reveal">
+    <div class="amenity-card featured">
+      <div class="amenity-num">01</div>
+      <p class="amenity-name">Private Sauna</p>
+      <p class="amenity-desc">A dedicated Finnish-style sauna with authentic löyly steam, cedar benches, and a private shower. Reserved exclusively for your group the entire stay.</p>
+    </div>
+    <div class="amenity-card featured">
+      <div class="amenity-num">02</div>
+      <p class="amenity-name">Open-Air Bath</p>
+      <p class="amenity-desc">An outdoor bathing terrace for soaking under the sky in any season. In winter, Hokkaido snowfall and warm water create an unforgettable experience.</p>
+    </div>
+  </div>
+  <!-- row 2 -->
+  <div class="amenity-grid reveal">
+    <div class="amenity-card">
+      <div class="amenity-num">03</div>
+      <p class="amenity-name">4 Bedrooms</p>
+      <p class="amenity-desc">Four beautifully designed bedrooms with premium bedding, accommodating up to 10 guests comfortably. Perfect for families, friend groups, and corporate retreats.</p>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-num">04</div>
+      <p class="amenity-name">Cinema Room</p>
+      <p class="amenity-desc">A private home theater with projector and surround sound. Perfect for evenings in — film nights with the whole group after a day in the Hokkaido outdoors.</p>
+    </div>
+  </div>
+  <!-- row 3 -->
+  <div class="amenity-grid reveal">
+    <div class="amenity-card">
+      <div class="amenity-num">05</div>
+      <p class="amenity-name">Full Kitchen</p>
+      <p class="amenity-desc">A fully equipped professional kitchen. Self-cater at your leisure or arrange a private chef for special evenings at home with your group.</p>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-num">06</div>
+      <p class="amenity-name">Spacious Living</p>
+      <p class="amenity-desc">Generous open-plan living and dining areas for your group to gather, dine, and relax together in refined, unhurried comfort throughout your stay.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <h2 style="display:none;">Sapporo Private Retreat Gallery</h2>
+
+  <div class="gallery-track">
+
+    <figure class="gallery-img">
+      <img src="living.jpg"
+           alt="Luxury living space at Sapporo Private Retreat in Hokkaido"
+           width="1600" height="1000"
+           loading="eager">
+      <figcaption class="gallery-label">Living Space</figcaption>
+    </figure>
+
+    <figure class="gallery-img">
+      <img src="sauna.jpg"
+           alt="Private Finnish sauna inside Sapporo luxury villa"
+           width="800" height="1000"
+           loading="lazy">
+      <figcaption class="gallery-label">Private Sauna</figcaption>
+    </figure>
+
+    <figure class="gallery-img">
+      <img src="bath.jpeg"
+           alt="Open-air private bath in Sapporo Hokkaido"
+           width="800" height="1000"
+           loading="lazy">
+      <figcaption class="gallery-label">Open-Air Bath</figcaption>
+    </figure>
+
+    <figure class="gallery-img">
+      <img src="bed.jpg"
+           alt="Master bedroom with premium bedding in Sapporo retreat"
+           width="800" height="1000"
+           loading="lazy">
+      <figcaption class="gallery-label">Master Bedroom</figcaption>
+    </figure>
+
+    <figure class="gallery-img">
+      <img src="theater.jpg"
+           alt="Private cinema room in Sapporo luxury rental"
+           width="800" height="1000"
+           loading="lazy">
+      <figcaption class="gallery-label">Cinema Room</figcaption>
+    </figure>
+
+  </div>
+</section>
+
+<section class="seo-section">
+  <div class="section-header reveal">
+    <p class="eyebrow">The Experience</p>
+    <h2 class="section-title">Why Stay in a Luxury Villa in Sapporo?</h2>
+    <div class="gold-line"></div>
+  </div>
+
+  <div class="seo-text reveal">
+    <p>
+      A luxury villa in Sapporo offers complete privacy, generous living space,
+      and exclusive features such as a private sauna and open-air bath.
+      Designed for families, corporate retreats, and refined group travel in Hokkaido.
+    </p>
+  </div>
+</section>
+
+<!-- WHO -->
+<section class="who">
+  <div class="section-header reveal">
+    <p class="eyebrow">Perfect For</p>
+    <h2 class="section-title">Who This Sapporo Luxury Villa Is Perfect For</h2>
+    <div class="gold-line"></div>
+  </div>
+  <div class="who-grid reveal">
+    <div class="who-item">
+      <span class="who-icon">★</span>
+      <p class="who-title">Families</p>
+      <p class="who-desc">Space and comfort for multigenerational travel. Give the whole family room to breathe, play, and create memories together in Hokkaido.</p>
+    </div>
+    <div class="who-item">
+      <span class="who-icon">✦</span>
+      <p class="who-title">Friend Groups</p>
+      <p class="who-desc">Celebrate a birthday, reunion, or milestone in style. Shared sauna sessions, late-night movies, and mornings together under one roof.</p>
+    </div>
+    <div class="who-item">
+      <span class="who-icon">◈</span>
+      <p class="who-title">Corporate Teams</p>
+      <p class="who-desc">Offsites and team retreats in a private, inspiring setting. A comfortable base for teams to reconnect and recharge away from the office.</p>
+    </div>
+    <div class="who-item">
+      <span class="who-icon">◇</span>
+      <p class="who-title">Luxury Travellers</p>
+      <p class="who-desc">For those who travel well and expect more. A private luxury villa offering what no hotel can — total space, total freedom, total Hokkaido.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location">
+  <div class="location-text reveal">
+    <p class="eyebrow">Location</p>
+    <h2>The Best of<br><em>Hokkaido</em><br>at Your Door</h2>
+    <p>Sapporo is Japan's fifth-largest city — celebrated for legendary powder snow in winter, vibrant summer festivals, world-class seafood, and natural beauty year-round.</p>
+    <p>The luxury villa sits minutes from Sapporo's dining district, with easy access to Niseko and Furano ski fields, the Otaru coastline, and Jozankei's famous hot springs.</p>
+    <p>Every season brings a different Hokkaido — all from the same exceptional base.</p>
+  </div>
+  <div class="map-visual reveal">
+    <span class="map-label">Sapporo, Hokkaido, Japan</span>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="inquiry">
+  <p class="cta-eyebrow reveal">Reserve Your Stay</p>
+  <h2 class="cta-title reveal">Ready for an <em>Unforgettable</em><br>Hokkaido Experience?</h2>
+  <div class="cta-buttons reveal">
+    <a href="https://www.airbnb.jp/rooms/1594047500426304484?check_in=2026-04-14&check_out=2026-04-15&guests=1&adults=1&s=67&unique_share_id=25504c66-3fa1-4e44-85f9-7561a243f9da" class="btn-primary">Book on Airbnb</a>
+    <a href="mailto:k.kanami0605@gmail.com" class="btn-secondary">Direct Enquiry</a>
+  </div>
+  <p class="cta-note reveal">Whole luxury villa rental · Up to 10 guests · Available year-round</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Sapporo Private Retreat</div>
+  <ul class="footer-links">
+    <li><a href="#sauna">Sauna &amp; Bath</a></li>
+    <li><a href="#amenities">Amenities</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#inquiry">Book</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 Sapporo Private Retreat. All rights reserved.</div>
+</footer>
+
+<script>
+  // cursor
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove',e=>{
+    mx=e.clientX; my=e.clientY;
+    cursor.style.left=mx+'px'; cursor.style.top=my+'px';
+  });
+  (function loop(){ rx+=(mx-rx)*.12; ry+=(my-ry)*.12; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(loop); })();
+
+  // scroll reveal
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('visible'),80); io.unobserve(e.target); } });
+  },{threshold:.08});
+  document.querySelectorAll('.reveal').forEach(r=>io.observe(r));
+</script>
+</body>
+</html>
