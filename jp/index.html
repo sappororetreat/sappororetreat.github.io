@@ -283,8 +283,8 @@ nav::before{
   position:absolute;
   inset:0;
   background:url("../main.jpeg");
-  background-size:110%;
-  background-position:90% center;
+  background-size:cover;
+  background-position:70% center;
   background-repeat:no-repeat;
 }
 .hero-bg::after{
@@ -292,14 +292,14 @@ nav::before{
   position:absolute;
   inset:0;
   background:
-    linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.55) 100%),
-    linear-gradient(to right, rgba(0,0,0,0.4) 0%, transparent 60%);
+    linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.1) 45%, rgba(0,0,0,0.5) 100%),
+    linear-gradient(to right, rgba(0,0,0,0.35) 0%, transparent 55%);
 }
 .hero-orb{position:absolute;top:15%;right:10%;width:420px;height:420px;background:radial-gradient(circle,rgba(180,120,40,0.12) 0%,transparent 70%);border-radius:50%;pointer-events:none;animation:orbPulse 6s ease-in-out infinite;}
 @keyframes orbPulse{0%,100%{transform:scale(1);opacity:.7;}50%{transform:scale(1.15);opacity:1;}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
 .hero-content{
-  position:relative;z-index:2;
+  position:relative; z-index:2;
   padding:100px 72px 80px;
   width:100%;
   display:flex;
@@ -831,13 +831,14 @@ nav{ padding:16px 20px; }
 
 /* HERO */
 .hero{ min-height:100svh; }
-.hero-content{ padding:90px 24px 60px; min-height:auto; justify-content:flex-start; }
-.hero-bottom-content{ margin-top:20px; }
+.hero-bg{ background-size:cover; background-position:70% top; }
+.hero-content{ padding:70px 24px 48px; min-height:100svh; justify-content:flex-start; }
+.hero-bottom-content{ margin-top:16px; }
 .hero-title{ font-size:34px !important; line-height:1.1; letter-spacing:.01em; }
-.hero-sub{ font-size:11px; letter-spacing:.1em; margin-top:16px; }
-.hero-badges{ grid-template-columns:1fr 1fr; gap:8px; max-width:100%; margin-top:16px; }
+.hero-sub{ font-size:11px; letter-spacing:.1em; margin-top:14px; }
+.hero-badges{ grid-template-columns:1fr 1fr; gap:8px; max-width:100%; margin-top:14px; }
 .hero-badge{ font-size:10px; padding:8px 10px; text-align:center; }
-.hero-orb{ width:200px; height:200px; top:10%; right:5%; }
+.hero-orb{ display:none; }
 
 /* USE TYPES */
 .use-types-wrap{ padding:60px 20px 0; }
