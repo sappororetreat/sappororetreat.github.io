@@ -622,75 +622,100 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;o
 /* ===== MOBILE FIX ===== */
 @media (max-width:768px){
 
-nav{
-padding:16px 20px;
+/* NAV */
+nav{ padding:16px 20px; }
+.nav-links{ display:none; }
+
+/* HERO */
+.hero{ padding-top:80px; min-height:100svh; }
+.hero-content{ padding:0 24px 80px; }
+.hero-title{ font-size:38px !important; line-height:1.15; letter-spacing:.02em; }
+.hero-sub{ font-size:10px; letter-spacing:.15em; }
+.hero-badges{ gap:8px; }
+.hero-badge{ font-size:9px; padding:6px 12px; }
+.hero-orb{ width:200px; height:200px; top:10%; right:5%; }
+
+/* USE TYPES */
+.use-types-wrap{ padding:60px 20px 0; }
+.use-grid{ grid-template-columns:1fr; gap:3px; }
+
+/* SAUNA EXPERIENCE */
+.sauna-experience{ padding:0 20px 60px; }
+.sauna-exp-inner{ grid-template-columns:1fr; gap:40px; }
+.sauna-exp-text h2{ font-size:32px; }
+.sauna-exp-steps{ gap:3px; }
+
+/* INTRO */
+.intro{ grid-template-columns:1fr; gap:48px; padding:60px 20px; }
+.stats-grid{ grid-template-columns:1fr 1fr; }
+
+/* FEATURE SECTIONS (sauna / bath) */
+.feature-section{ min-height:70vh; }
+.feature-inner{ padding:40px 24px; max-width:100%; }
+.bath-inner{ padding:40px 24px; max-width:100%; text-align:left; }
+.bath-inner .feature-tag{ flex-direction:row; }
+.bath-inner .feature-tag::before{ display:block; background:var(--blue); }
+.bath-inner .feature-tag::after{ display:none; }
+.feature-inner h2{ font-size:36px; }
+.sauna-hint{ padding:20px; }
+
+/* AMENITIES */
+.amenities{ padding:60px 20px; }
+.amenity-grid{ grid-template-columns:1fr; }
+.amenity-card{ padding:36px 28px; }
+.amenity-card.featured{ padding:40px 28px; }
+
+/* FLOW */
+.flow{ padding:60px 20px; }
+.flow-grid{ grid-template-columns:1fr; }
+.flow-card{ padding:36px 28px; }
+
+/* GALLERY */
+.gallery{ padding:0 0 60px; }
+.gallery-track{
+  grid-template-columns:1fr;
+  grid-template-rows:240px 240px 240px 240px 240px;
+}
+.gallery-cell:first-child{ grid-row:auto; }
+
+/* WHO */
+.who{ padding:0 20px 60px; }
+.who-grid{ grid-template-columns:1fr 1fr; gap:3px; margin-top:40px; }
+.who-item{ padding:36px 20px; }
+
+/* LOCATION */
+.location{ grid-template-columns:1fr; padding:60px 20px; gap:40px; }
+.map-visual{ height:280px; }
+
+/* PRICING */
+.pricing{ padding:60px 20px; }
+.price-grid{ grid-template-columns:1fr; }
+.price-card{ padding:36px 28px; }
+.price-amount{ font-size:36px !important; }
+
+/* CTA */
+.cta-section{ padding:80px 20px; }
+.cta-title{ font-size:32px !important; }
+.booking-grid{ grid-template-columns:1fr; max-width:100%; }
+.booking-card{ padding:32px 24px; }
+
+/* FOOTER */
+footer{ flex-direction:column; gap:20px; text-align:center; padding:40px 20px; }
+.footer-links{ flex-wrap:wrap; justify-content:center; gap:16px; }
+
+/* SECTION HEADERS */
+.section-header{ margin-bottom:40px; }
+
 }
 
-.nav-links{
-display:none;
+@media (max-width:480px){
+.hero-title{ font-size:30px !important; }
+.who-grid{ grid-template-columns:1fr; }
+.stats-grid{ grid-template-columns:1fr 1fr; }
+.use-card{ padding:36px 28px; }
+.flow-step-num{ font-size:24px; min-width:28px; }
 }
 
-.hero{
-padding-top:100px;
-}
-
-.hero-content{
-padding:0 24px 80px;
-}
-
-.hero-title{
-font-size:42px !important;
-line-height:1.15;
-}
-
-.hero-sub{
-font-size:10px;
-letter-spacing:.2em;
-}
-
-.hero-badges{
-gap:8px;
-}
-
-.hero-badge{
-font-size:9px;
-padding:6px 14px;
-}
-
-.intro{
-grid-template-columns:1fr;
-gap:60px;
-padding:80px 24px;
-}
-
-.feature-inner{
-padding:0 24px;
-}
-
-.feature-inner h2{
-font-size:42px;
-}
-
-.amenity-grid{
-grid-template-columns:1fr;
-}
-
-.who-grid{
-grid-template-columns:1fr;
-}
-
-.location{
-grid-template-columns:1fr;
-padding:80px 24px;
-}
-
-footer{
-flex-direction:column;
-gap:20px;
-text-align:center;
-}
-
-}
 </style>
 <script type="application/ld+json">
 {
@@ -786,14 +811,14 @@ text-align:center;
         <p class="use-label">Short Stay</p>
         <p class="use-title">ショートステイ</p>
         <p class="use-desc">宿泊利用を基本として、日中の短時間滞在プランについてもご相談を承っております。滞在時間については柔軟にご案内いたしますので、まずはお気軽にお問い合わせください。</p>
-        <p class="use-note">※ 詳細・料金はお問い合わせにてご案内いたします<br><a href="mailto:k.kanami0605@gmail.com" style="color:var(--gold);letter-spacing:.1em;text-decoration:none;border-bottom:1px solid rgba(201,169,110,0.4);padding-bottom:1px;font-family:'Tenor Sans',sans-serif;font-size:11px;cursor:pointer;">▶ お問い合わせはこちら</a></p>
+        <p class="use-note">※ 詳細・料金はお問い合わせにてご案内いたします<br><a href="/cdn-cgi/l/email-protection#117a3f7a707f707c782127212451767c70787d3f727e7c" style="color:var(--gold);letter-spacing:.1em;text-decoration:none;border-bottom:1px solid rgba(201,169,110,0.4);padding-bottom:1px;font-family:'Tenor Sans',sans-serif;font-size:11px;cursor:pointer;">▶ お問い合わせはこちら</a></p>
       </div>
       <div class="use-card featured">
         <div class="use-num">03</div>
         <p class="use-label">Facility Use</p>
         <p class="use-title">撮影・イベント利用</p>
         <p class="use-desc">撮影・イベント・会食など、空間そのものをご活用いただく施設利用については事前相談制となっております。ご希望の用途・日程をお知らせのうえ、お気軽にご連絡ください。</p>
-        <p class="use-note">※ 内容によってはお受けできない場合もございます<br><a href="mailto:k.kanami0605@gmail.com" style="color:var(--gold);letter-spacing:.1em;text-decoration:none;border-bottom:1px solid rgba(201,169,110,0.4);padding-bottom:1px;font-family:'Tenor Sans',sans-serif;font-size:11px;cursor:pointer;">▶ お問い合わせはこちら</a></p>
+        <p class="use-note">※ 内容によってはお受けできない場合もございます<br><a href="/cdn-cgi/l/email-protection#0d6623666c636c60643d3b3d384d6a606c6461236e6260" style="color:var(--gold);letter-spacing:.1em;text-decoration:none;border-bottom:1px solid rgba(201,169,110,0.4);padding-bottom:1px;font-family:'Tenor Sans',sans-serif;font-size:11px;cursor:pointer;">▶ お問い合わせはこちら</a></p>
       </div>
     </div>
   </div>
@@ -865,7 +890,7 @@ text-align:center;
       <p class="sauna-hint-title">✦ &nbsp;サウナをもっと自由に楽しみたい方へ</p>
       <p>「短時間でもサウナを体験したい」——そんなご要望をいただくことがあります。</p>
       <p>ご希望の内容によってはご対応できる場合もございます。まずはお気軽にご相談ください。</p>
-      <a href="mailto:k.kanami0605@gmail.com" class="hint-cta">詳しくはお問い合わせ →</a>
+      <a href="/cdn-cgi/l/email-protection#a2c98cc9c3ccc3cfcb92949297e2c5cfc3cbce8cc1cdcf" class="hint-cta">詳しくはお問い合わせ →</a>
     </div>
   </div>
 </section>
@@ -1128,7 +1153,7 @@ text-align:center;
       <p class="booking-name">Airbnb</p>
       <p class="booking-desc">Airbnbで宿泊予約</p>
     </a>
-    <a href="mailto:k.kanami0605@gmail.com" class="booking-card">
+    <a href="/cdn-cgi/l/email-protection#3e5510555f505f53570e080e0b7e59535f5752105d5153" class="booking-card">
       <span class="booking-icon">✉</span>
       <p class="booking-name">Direct Mail</p>
       <p class="booking-desc">メールでお問い合わせ</p>
@@ -1151,7 +1176,7 @@ text-align:center;
   <div class="footer-copy">© 2026 Sapporo Private Villa. All rights reserved.</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const cursor = document.getElementById('cursor');
 const ring = document.getElementById('cursorRing');
 let mx=0,my=0,rx=0,ry=0;
