@@ -618,6 +618,34 @@ footer{border-top:1px solid rgba(201,169,110,0.12);padding:48px 52px;display:fle
 }
 /* GRAIN */
 body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9997;opacity:.022;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:128px;}
+/* ===== MOBILE FIX ===== */
+@media (max-width:768px){
+
+  .hero-title{
+    font-size:34px !important;
+    line-height:1.3;
+  }
+
+  .feature-inner{
+    padding:0 24px;
+  }
+
+  .feature-inner h2{
+    font-size:32px;
+  }
+
+  .feature-inner p{
+    font-size:14px;
+  }
+
+  .sauna-hint{
+    margin-top:20px;
+    padding:18px;
+  }
+
+}
+
+
 </style>
 <script type="application/ld+json">
 {
