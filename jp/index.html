@@ -87,7 +87,7 @@ nav::before{
   min-height:100vh;
   position:relative;
   display:flex;
-  align-items:flex-end;
+  align-items:flex-start;
   overflow:hidden;
 }
 
@@ -108,7 +108,7 @@ nav::before{
 .hero-orb{position:absolute;top:15%;right:10%;width:420px;height:420px;background:radial-gradient(circle,rgba(180,120,40,0.12) 0%,transparent 70%);border-radius:50%;pointer-events:none;animation:orbPulse 6s ease-in-out infinite;}
 @keyframes orbPulse{0%,100%{transform:scale(1);opacity:.7;}50%{transform:scale(1.15);opacity:1;}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
-.hero-content{position:relative;z-index:2;padding:0 72px 96px;max-width:1200px;}
+.hero-content{position:relative;z-index:2;padding:160px 72px 96px;max-width:1200px;}
 .hero-eyebrow{font-size:11px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;display:flex;align-items:center;gap:16px;font-family:'Tenor Sans',sans-serif;opacity:0;animation:fadeUp 1s .4s forwards;}
 .hero-eyebrow::before{content:'';display:block;width:36px;height:1px;background:var(--gold);}
 .hero-title{font-size:clamp(48px,8vw,110px);font-weight:200;color:var(--warm);line-height:1.05;letter-spacing:.05em;opacity:0;animation:fadeUp 1.2s .6s forwards; max-width:none;}
@@ -121,8 +121,8 @@ nav::before{
   opacity:0;
   animation:fadeUp 1s 1s forwards;
 }
-.hero-badges{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap;opacity:0;animation:fadeUp 1s 1.2s forwards;}
-.hero-badge{padding:8px 20px;border:1px solid rgba(201,169,110,0.35);font-size:11px;letter-spacing:.1em;color:var(--gold-light);background:rgba(9,9,8,0.4);backdrop-filter:blur(8px);font-family:'Noto Serif JP',serif;font-weight:300;}
+.hero-badges{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:36px;max-width:440px;opacity:0;animation:fadeUp 1s 1.2s forwards;}
+.hero-badge{padding:8px 20px;border:1px solid rgba(201,169,110,0.35);font-size:11px;letter-spacing:.1em;color:var(--gold-light);background:rgba(9,9,8,0.4);backdrop-filter:blur(8px);font-family:'Noto Serif JP',serif;font-weight:300;text-align:center;}
 
 /* SCROLL INDICATOR */
 
@@ -300,7 +300,9 @@ nav::before{
 .bath-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 40% 60% at 80% 35%,rgba(60,140,180,0.12) 0%,transparent 60%);}
 .bath-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,var(--black) 0%,transparent 18%);}
 .feature-photo{position:absolute;inset:0;z-index:0;}
-.feature-photo img{width:100%;height:100%;object-fit:cover;opacity:1;}
+.feature-photo img{width:100%;height:100%;object-fit:cover;opacity:1;object-position:right center;}
+.sauna-photo img{object-position:75% center;}
+.bath-photo img{object-position:60% center;}
 .feature-inner{position:relative;z-index:2;padding:0 72px;max-width:760px;}
 .bath-inner{text-align:left;}
 .feature-tag{display:inline-flex;align-items:center;gap:14px;font-size:10px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;font-family:'Tenor Sans',sans-serif;}
@@ -631,8 +633,8 @@ nav{ padding:16px 20px; }
 .hero-content{ padding:0 24px 80px; }
 .hero-title{ font-size:38px !important; line-height:1.15; letter-spacing:.02em; }
 .hero-sub{ font-size:10px; letter-spacing:.15em; }
-.hero-badges{ gap:8px; }
-.hero-badge{ font-size:9px; padding:6px 12px; }
+.hero-badges{ grid-template-columns:1fr 1fr; gap:8px; max-width:100%; }
+.hero-badge{ font-size:9px; padding:6px 10px; text-align:center; }
 .hero-orb{ width:200px; height:200px; top:10%; right:5%; }
 
 /* USE TYPES */
@@ -777,7 +779,7 @@ footer{ flex-direction:column; gap:20px; text-align:center; padding:40px 20px; }
       <em>in Sapporo, Hokkaido</em>
     </h1>
 
-    <p class="hero-sub">札幌のプライベートサウナ付き貸切ヴィラ Sapporo Private Villa</p>
+    <p class="hero-sub">札幌のプライベートサウナ付き貸切ヴィラ<br>Sapporo Private Villa</p>
 
     <div class="hero-badges">
       <span class="hero-badge">プライベートサウナ</span>
@@ -880,7 +882,7 @@ footer{ flex-direction:column; gap:20px; text-align:center; padding:40px 20px; }
 <!-- SAUNA -->
 <section class="feature-section" id="sauna">
  <div class="feature-bg sauna-bg"></div>
-  <div class="feature-photo"><img src="../sauna2.jpg" alt="Private Sauna"></div>
+  <div class="feature-photo sauna-photo"><img src="../sauna2.jpg" alt="Private Sauna"></div>
   <div class="feature-inner reveal">
     <div class="feature-tag">Signature Feature</div>
     <h2>プライベート<br><em>サウナスイート</em></h2>
@@ -898,7 +900,7 @@ footer{ flex-direction:column; gap:20px; text-align:center; padding:40px 20px; }
 <!-- OUTDOOR BATH -->
 <section class="feature-section bath-section">
   <div class="feature-bg bath-bg"></div>
-  <div class="feature-photo"><img src="../bath.jpg" alt="Open-Air Bath"></div>
+  <div class="feature-photo bath-photo"><img src="../bath.jpg" alt="Open-Air Bath"></div>
   <div class="feature-inner bath-inner reveal">
     <div class="feature-tag">Signature Feature</div>
     <h2>露天風呂<br><em>プライベートバス</em></h2>
