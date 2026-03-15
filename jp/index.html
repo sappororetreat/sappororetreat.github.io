@@ -290,25 +290,135 @@ nav::before{
 .stat-label{font-size:11px;letter-spacing:.1em;color:var(--muted);margin-top:10px;}
 
 /* FEATURE SECTIONS */
-.feature-section{min-height:80vh;position:relative;display:flex;align-items:center;}
-.feature-bg{position:absolute;inset:0;}
-.sauna-bg{background:linear-gradient(to right,rgba(9,9,8,0.97) 0%,rgba(9,9,8,0.85) 45%,rgba(9,9,8,0.2) 100%),radial-gradient(ellipse 90% 80% at 75% 50%,#3d1e06 0%,#1f0e03 40%,#0c0806 100%);}
-.sauna-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 40% 60% at 80% 30%,rgba(220,140,40,0.18) 0%,transparent 60%);}
-.sauna-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,var(--black) 0%,transparent 18%);}
-.bath-section{justify-content:flex-start;}
-.bath-bg{background:linear-gradient(to right,rgba(9,9,8,0.97) 0%,rgba(9,9,8,0.85) 45%,rgba(9,9,8,0.2) 100%),radial-gradient(ellipse 90% 80% at 75% 50%,#071b26 0%,#040e16 40%,#060a0c 100%);}
-.bath-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 40% 60% at 80% 35%,rgba(60,140,180,0.12) 0%,transparent 60%);}
-.bath-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,var(--black) 0%,transparent 18%);}
-.feature-photo{position:absolute;inset:0;z-index:0;}
-.feature-photo img{width:100%;height:100%;object-fit:cover;opacity:1;}　
-.feature-inner{position:relative;z-index:2;padding:0 72px;max-width:760px;}
-.bath-inner{text-align:left;}
-.feature-tag{display:inline-flex;align-items:center;gap:14px;font-size:10px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;font-family:'Tenor Sans',sans-serif;}
-.feature-tag::before{content:'';display:block;width:40px;height:1px;background:currentColor;}
-.bath-inner .feature-tag{color:var(--blue);}
-.feature-inner h2{font-size:clamp(36px,5vw,72px);font-weight:200;line-height:1.55;color:var(--warm);margin-bottom:28px;letter-spacing:.06em;}
-.feature-inner h2 em{font-style:normal;color:var(--gold-light);display:block;}
-.bath-inner h2 em{color:var(--blue);}
+.feature-section{
+  min-height:80vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+
+/* 背景 */
+.feature-bg{
+  position:absolute;
+  inset:0;
+  z-index:0;
+}
+
+/* サウナ背景 */
+.sauna-bg{
+  background:
+  linear-gradient(to right,rgba(9,9,8,0.97) 0%,rgba(9,9,8,0.85) 45%,rgba(9,9,8,0.2) 100%),
+  radial-gradient(ellipse 90% 80% at 75% 50%,#3d1e06 0%,#1f0e03 40%,#0c0806 100%);
+}
+
+.sauna-bg::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse 40% 60% at 80% 30%,rgba(220,140,40,0.18) 0%,transparent 60%);
+}
+
+.sauna-bg::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,var(--black) 0%,transparent 18%);
+}
+
+/* 露天風呂背景 */
+.bath-section{
+  justify-content:flex-start;
+}
+
+.bath-bg{
+  background:
+  linear-gradient(to right,rgba(9,9,8,0.97) 0%,rgba(9,9,8,0.85) 45%,rgba(9,9,8,0.2) 100%),
+  radial-gradient(ellipse 90% 80% at 75% 50%,#071b26 0%,#040e16 40%,#060a0c 100%);
+}
+
+.bath-bg::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse 40% 60% at 80% 35%,rgba(60,140,180,0.12) 0%,transparent 60%);
+}
+
+.bath-bg::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,var(--black) 0%,transparent 18%);
+}
+
+/* 写真 */
+.feature-photo{
+  position:absolute;
+  inset:0;
+  z-index:1;
+}
+
+.feature-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* テキスト */
+.feature-inner{
+  position:relative;
+  z-index:2;
+  padding:0 72px;
+  max-width:760px;
+}
+
+.bath-inner{
+  text-align:left;
+}
+
+.feature-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+  font-size:10px;
+  letter-spacing:.5em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:28px;
+  font-family:'Tenor Sans',sans-serif;
+}
+
+.feature-tag::before{
+  content:'';
+  display:block;
+  width:40px;
+  height:1px;
+  background:currentColor;
+}
+
+.bath-inner .feature-tag{
+  color:var(--blue);
+}
+
+.feature-inner h2{
+  font-size:clamp(36px,5vw,72px);
+  font-weight:200;
+  line-height:1.55;
+  color:var(--warm);
+  margin-bottom:28px;
+  letter-spacing:.06em;
+}
+
+.feature-inner h2 em{
+  font-style:normal;
+  color:var(--gold-light);
+  display:block;
+}
+
+.bath-inner h2 em{
+  color:var(--blue);
+}
+
 .feature-inner p{
   font-size:14px;
   line-height:2.2;
