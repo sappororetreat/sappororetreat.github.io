@@ -506,7 +506,32 @@ nav::before{
   border-radius:2px;
 }
 
+/* 露天風呂セクションのレイアウト調整 */
 
+.bath-section{
+  display:block;
+}
+
+.bath-inner{
+  max-width:760px;
+  margin:0 auto;
+  padding:40px 20px;
+}
+  
+/* ===== OUTDOOR BATH FORCE FIX ===== */
+
+.bath-section{
+  display:block !important;
+}
+
+.bath-section img{
+  position:relative !important;
+  width:100% !important;
+  height:auto !important;
+  display:block !important;
+  max-width:1200px;
+  margin:40px auto;
+}
   
 /* AMENITIES */
 .amenities{padding:100px 52px;max-width:1400px;margin:0 auto;}
