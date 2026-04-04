@@ -57,7 +57,23 @@
       "@type": "QuantitativeValue",
       "value": 10,
       "maxValue": 10
-    }
+    },
+    "numberOfBedrooms": 4,
+    "numberOfBathroomsTotal": 2,
+    "bed": [
+      {
+        "@type": "BedDetails",
+        "numberOfBeds": 4,
+        "typeOfBed": "ダブルベッド"
+      }
+    ],
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "プライベートサウナ", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "露天風呂", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "シアタールーム", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "フルキッチン", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "完全貸切", "value": true }
+    ]
   },
   "name": "Sapporo Private Villa",
   "alternateName": ["札幌プライベートヴィラ", "サッポロプライベートヴィラ", "Sapporo Private Sauna Villa"],
@@ -66,7 +82,12 @@
   "image": [
     "https://sappororetreat.github.io/main.jpeg",
     "https://sappororetreat.github.io/sauna2.jpg",
-    "https://sappororetreat.github.io/bath.jpg"
+    "https://sappororetreat.github.io/bath.jpg",
+    "https://sappororetreat.github.io/sauna.jpg",
+    "https://sappororetreat.github.io/living.jpg",
+    "https://sappororetreat.github.io/openbath.jpg",
+    "https://sappororetreat.github.io/bed.jpg",
+    "https://sappororetreat.github.io/theater.jpg"
   ],
   "address": {
     "@type": "PostalAddress",
@@ -1086,7 +1107,7 @@ footer{ flex-direction:column; gap:20px; text-align:center; padding:40px 20px; }
   <div class="feature-inner reveal">
     <div class="feature-tag">Signature Feature</div>
     <h2>プライベート<br><em>サウナスイート</em></h2>
-    <p>本格フィンランド式サウナを完備。ロウリュの蒸気、天然木の香り、静寂<br>——あなたのグループだけのためのウェルネス空間です。</p>
+    <p>本格フィンランド式サウナを完備。ロウリュの蒸気、天然木の香り、静寂——あなたのグループだけのためのウェルネス空間です。</p>
     <p>北海道の一日を締めくくる、至福のサウナ体験。</p>
     <div class="sauna-hint">
       <p class="sauna-hint-title">✦ &nbsp;サウナをもっと自由に楽しみたい方へ</p>
